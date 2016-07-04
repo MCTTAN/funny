@@ -29,7 +29,7 @@ int highscore(int points){
   while(outFS.good())
     outFS << points;
   
-  outFSF.close();
+  outFS.close();
   
   inFS.open("highscore.txt");
   
