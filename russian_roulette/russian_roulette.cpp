@@ -49,7 +49,7 @@ int highscore(int points){
   
   inFS.close();
   
-  for(unsigned int i = 0; i < scores.size(); ++i){
+  for(unsigned i = 0; i < scores.size(); ++i)
     if(scores.at(i) > highscore)
       highscore = scores.at(i);
   
@@ -90,7 +90,7 @@ int main(){
     pull = rand() % 6;
     
     if(pull == position_of_bullet){
-      cout << end << "You're dead." << endl << "Score: " << points << endl << "Highscore: " << highscore(points) << endl;
+      cout << endl << "You're dead." << endl << "Score: " << points << endl << "Highscore: " << highscore(points) << endl;
       response = 'N';
       break;
     }
