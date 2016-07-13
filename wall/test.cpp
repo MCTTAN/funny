@@ -103,9 +103,9 @@ void day_zero()
 void chapter_zero()
 {   
     cout << endl << endl << endl;
-    print_text_10("┌┬┐ ┬ ┌─┐  ┬─┐ ┬ ┌─┐ ┌─┐");
-    print_text_10(" ││ │ ├┤   ├┬┘ │ └─┐ ├┤ ");
-    print_text_10("─┴┘ ┴ └─┘  ┴└─ ┴ └─┘ └─┘");
+    print_text_10("╔╦═╗ ╦ ╔═╗  ╦═╗ ╦ ╔═╗ ╔═╗");
+    print_text_10(" ║ ║ ║ ║╣   ╠╦╝ ║ ╚═╗ ║╣ ");
+    print_text_10("═╩═╝ ╩ ╚═╝  ╩╚═ ╩ ╚═╝ ╚═╝");
     return;
 }
 
@@ -230,20 +230,72 @@ void dialogue_2()
     print_delay_10("TRUMP: Looks like I figured out where the heat's coming from.");
     print_delay_17("You boil eggs with that hot-head of yours?");
     print_delay_10("YOU: Pardon?");
-    print_delay_10("TRUMP: Thicken that skin of yours.");
+    print_delay_10("TRUMP: Chill.");
     cout << left << setw(12) << " " << right << setw(12) << "Unless," << endl;
     timer(2);
-    cout << left << setw(14) << " " << right << setw(14) << "you can't," << endl;
+    cout << left << setw(13) << " " << right << setw(13) << "you can't" << endl;
     print_delay_17("because you're Mexican?");
     cout << left << setw(15) << " " << right << setw(15) << "Or a Democrat?" << endl;
+    cout << left << setw(16) << " " << right << setw(16) << "Chinese? Korean? Taliban?" << endl;
     print_delay_10("YOU: Erm-");
     print_delay_10("TRUMP: Well, which is it?");
-    print_delay_10("YOU: Neither.");
+    print_delay_10("YOU: ...");
     print_delay_10("TRUMP: ...");
     cout << left << setw(11) << " " << right << setw(11) << "Hmph." << endl;
     timer(2);
-    cout << left << setw(13) << " " << right << setw(13) << "Prove it." << endl;
-    timer(2);
+}
+
+void trial_1()
+{
+    cout << endl << endl << endl;
+    print_text_10("┌┬┐┬─┐┬┌─┐┬  ");
+    print_text_10(" │ ├┬┘│├─┤│  ");
+    print_text_10(" ┴ ┴└─┴┴ ┴┴─┘");
+    return;
+}
+
+void health_bar()
+{
+    cout << endl << endl << endl;
+    print_text_10("[█|█|█|█|█|█|█|█|█|█] 100%");
+    return;
+}
+
+void choice_1()
+{
+    cout << endl << endl << endl;
+    print_text_10("The choice is yours.");
+    print_text_10("1 - Swear loyalty");
+    print_text_10("2 - Deny support");
+    cout << endl;
+    cout << "Enter your selection here: ";
+    return;
+}
+
+void scratch()
+{
+    cout << endl << endl << endl;
+    print_text_10("  ██████  ▄████▄   ██▀███   ▄▄▄      ▄▄▄█████▓ ▄████▄   ██░ ██ ");
+    print_text_10("▒██    ▒ ▒██▀ ▀█  ▓██ ▒ ██▒▒████▄    ▓  ██▒ ▓▒▒██▀ ▀█  ▓██░ ██▒");
+    print_text_10("░ ▓██▄   ▒▓█    ▄ ▓██ ░▄█ ▒▒██  ▀█▄  ▒ ▓██░ ▒░▒▓█    ▄ ▒██▀▀██░");
+    print_text_10("  ▒   ██▒▒▓▓▄ ▄██▒▒██▀▀█▄  ░██▄▄▄▄██ ░ ▓██▓ ░ ▒▓▓▄ ▄██▒░▓█ ░██ ");
+    print_text_10("▒██████▒▒▒ ▓███▀ ░░██▓ ▒██▒ ▓█   ▓██▒  ▒██▒ ░ ▒ ▓███▀ ░░▓█▒░██▓");
+    print_text_10("▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░  ▒ ░░   ░ ░▒ ▒  ░ ▒ ░░▒░▒");
+    print_text_10("░ ░▒  ░ ░  ░  ▒     ░▒ ░ ▒░  ▒   ▒▒ ░    ░      ░  ▒    ▒ ░▒░ ░");
+    print_text_10("░  ░  ░  ░          ░░   ░   ░   ▒     ░      ░         ░  ░░ ░");
+    print_text_10("      ░  ░ ░         ░           ░  ░         ░ ░       ░  ░  ░");
+    print_text_10("         ░                                    ░                ");
+    return;    
+}
+
+void choice_2()
+{  
+    cout << endl << endl << endl;
+    print_delay_10("The choice is yours.");
+    print_delay_10("1 - Plead forgiveness");
+    print_delay_10("2 - Defend yourself");
+    cout << "Enter your selection here: ";
+    return;
 }
 
 int main()
@@ -274,6 +326,36 @@ int main()
     narration_9();
     narration_10();
     dialogue_2();
+    trial_1();
+    health_bar();
+    choice_1();
+    cin >> selection;
+    if(selection == 1)
+    {
+        cout << endl << endl << endl;
+        print_text_10("TRUMP: Prove it.");
+    }
+    else if(selection == 2)
+    {
+        cout << endl << endl << endl;
+        print_text_10("TRUMP: My fellow Americans,");
+        print_delay_17("a traitor stands before me.");
+        print_delay_17("Gather your fore-fathers' strength and attack him!");
+        scratch();
+        cout << endl << endl << endl;
+        timer(2);
+        print_delay_10("You fall down on your pool of blood.");
+        print_delay_10("[█|_|_|_|_|_|_|_|_|_] 10%");
+        cout << endl << endl << endl;
+        print_text_10("TRUMP: Any last words?");
+        trial_1();
+        choice_2();
+        cin >> selection;
+        cout << endl << endl << endl;
+        print_delay_10("TRUMP: Sorry amigo, but me no gusta.");
+        cout << endl << endl << endl;
+        print_delay_10("Game over");
+    }
     
     return 0;
 }
