@@ -64,7 +64,7 @@ int main()
     opening();
     title();
     main_menu();
-    cout << "Enter your selection here: ";
+    cout << left << setw(10) << " " << right << setw(10) << "Enter your selection here: ";
     cin >> selection;
     if(selection == 1)
     {
@@ -76,10 +76,10 @@ int main()
     }
     else
     {
-        cout << "Try again." << endl;
+        cout << left << setw(10) << " " << right << setw(10) << "Try again." << endl;
         while(selection != 1 && selection != 2)
         {
-            cout << "Enter your selection here: ";
+            cout << left << setw(10) << " " << right << setw(10) << "Enter your selection here: ";
             cin >> selection;
             if(selection == 1)
             {
@@ -91,7 +91,7 @@ int main()
             }
             else
             {
-                cout << "Try again." << endl;
+                cout << left << setw(10) << " " << right << setw(10) << "Try again." << endl;
             }
         }
         
