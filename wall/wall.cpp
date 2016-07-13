@@ -268,7 +268,7 @@ void choice_1()
     print_text_10("1 - Swear loyalty");
     print_text_10("2 - Deny support");
     cout << endl;
-    cout << "Enter your selection here: ";
+    print_text_10("Enter your selection here: ");
     return;
 }
 
@@ -296,6 +296,30 @@ void choice_2()
     print_delay_10("2 - Defend yourself");
     cout << "Enter your selection here: ";
     return;
+}
+
+void choice_3()
+{
+    cout << endl << endl << endl;
+    print_text_10("The choice is yours.");
+    print_text_10("1 - Give money");
+    print_text_10("2 - Kiss him");
+    print_text_10("3 - Give him your journal");
+    cout << endl;
+    print_text_10("Enter your selection here: ");
+    return;
+}
+
+void choice_4()
+{
+    cout << endl << endl << endl;
+    print_text_10("The choice is yours.");
+    print_text_10("1 - For his campaign");
+    print_text_10("2 - For his wall project");
+    print_text_10("3 - For him to keep");
+    cout << endl;
+    print_text_10("Enter your selection here: ");
+    return;   
 }
 
 int main()
@@ -334,6 +358,32 @@ int main()
     {
         cout << endl << endl << endl;
         print_text_10("TRUMP: Prove it.");
+        trial_1();
+        choice_3();
+        cin >> selection;
+        if(selection == 1)
+        {
+            cout << endl << endl << endl;
+            print_text_10("TRUMP: What's this for?");
+            trial_1();
+            choice_4();
+            cin >> selection;
+        }
+        else if(selection == 2)
+        {
+            cout << endl << endl << endl;
+            print_text_10("TRUMP: EW! A HOMOPHOBE!");
+            print_delay_17("Don't defile my Christianhood with your saucy lips!");
+            print_delay_17("My fellow Americans,");
+        }
+        else if(selection == 3)
+        {
+            cout << endl << endl << endl;
+            print_text_10("Trump reads your journal.");
+            timer(2);
+            cout << endl << endl << endl;
+            print_text_10("TRUMP: My fellow Americans,");
+        }
     }
     else if(selection == 2)
     {
