@@ -13,13 +13,6 @@ void timer(int seconds)
 	return;
 }
 
-void continue()
-{
-  indent();
-  print_text_10("Continue... ");
-  return;
-}
-
 void indent()
 {
   cout << endl << endl << endl;
@@ -49,6 +42,13 @@ void print_delay_10(string text)
     print_text_10(text);
     timer(2);
     return;
+}
+
+void continue_function()
+{
+  indent();
+  print_text_10("Continue... ");
+  return;
 }
 
 void opening()
@@ -225,7 +225,7 @@ void dialogue_2()
     print_text_10("TRUMP: Chill.");
     cout << left << setw(12) << " " << right << setw(12) << "Unless," << endl;
     cout << left << setw(13) << " " << right << setw(13) << "you can't" << endl;
-    print_delay_17("because you're Mexican?");
+    print_text_17("because you're Mexican?");
     cout << left << setw(15) << " " << right << setw(15) << "Or a Democrat?" << endl;
     cout << left << setw(16) << " " << right << setw(16) << "Chinese? Korean? Taliban?" << endl;
     print_text_10("YOU: Erm-");
@@ -277,24 +277,12 @@ void choice_4()
     return;   
 }
 
-void wrong_choice_1()
+void trial()
 {
     indent();
-    print_text_10("TRUMP: My fellow Americans,");
-    print_text_17("a traitor stands before me.");
-    print_text_17("Gather your fore-fathers' strength and attack him!");
-    timer(2);
-    indent();
-    scratch();
-    timer(2);
-    indent();
-    print_text_10("You fall down on your pool of blood.");
-    print_text_10("[█|_|_|_|_|_|_|_|_|_] 10%");
-    timer(2);
-    indent();
-    print_text_10("TRUMP: Any last words?");
-    trial_1();
-    choice_2();
+    print_text_10("┌┬┐┬─┐┬┌─┐┬  ");
+    print_text_10(" │ ├┬┘│├─┤│  ");
+    print_text_10(" ┴ ┴└─┴┴ ┴┴─┘");
     return;
 }
 
@@ -314,6 +302,27 @@ void scratch()
     return;    
 }
 
+void wrong_choice_1()
+{
+    indent();
+    print_text_10("TRUMP: My fellow Americans,");
+    print_text_17("a traitor stands before me.");
+    print_text_17("Gather your fore-fathers' strength and attack him!");
+    timer(2);
+    indent();
+    scratch();
+    timer(2);
+    indent();
+    print_text_10("You fall down on your pool of blood.");
+    print_text_10("[█|_|_|_|_|_|_|_|_|_] 10%");
+    timer(2);
+    indent();
+    print_text_10("TRUMP: Any last words?");
+    trial();
+    choice_2();
+    return;
+}
+
 void instructions()
 {
   indent();
@@ -322,74 +331,67 @@ void instructions()
   print_text_10("• You have a life bar. Once it hits 0%, you're dead.");
   print_text_10("• If you take damage and you're still alive, you will have chances to redeem yourself.");
   print_text_10("• Press ENTER to continue the story");
-  return 0;
-}
-
-void trial_1()
-{
-    indent();
-    print_text_10("┌┬┐┬─┐┬┌─┐┬  ");
-    print_text_10(" │ ├┬┘│├─┤│  ");
-    print_text_10(" ┴ ┴└─┴┴ ┴┴─┘");
-    return;
+  return;
 }
 
 int main()
 {
-    char continue;
+    char continue_char;
     unsigned selection;
     
+    opening();
+    title();
     instructions();
-    continue();
-    cin >> continue();
+    continue_function();
+    cin >> continue_char;
     
     day_zero();
     day_zero_title();
     
     narration_1();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
-    narration_2()
-    continue();
-    cin >> continue;
+    narration_2();
+    continue_function();
+    cin >> continue_char;
     
     bam();
     narration_3();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
     narration_4();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
     dialogue_1();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
     narration_5();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
     narration_6();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
     narration_7();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
     narration_8();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
     narration_9();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
     narration_10();
-    continue();
-    cin >> continue;
+    continue_function();
+    cin >> continue_char;
     
     trial();
     choice_1();
@@ -416,8 +418,8 @@ int main()
             print_text_10("YOU: No, sir. Just thought I could help, sir.");
             print_text_10("TRUMP: I don't need money.");
             print_text_10("YOU: I know. But you must want it, sir. Right?");
-            continue();
-            cin >> continue;
+            continue_function();
+            cin >> continue_char;
             indent();
             print_text_10("TRUMP: I'm never short on money, so I don't want and need your money.");
             print_text_10("YOU: How else can I show my support then?");
