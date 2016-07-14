@@ -13,10 +13,9 @@ void timer(int seconds)
 	return;
 }
 
-void print_text(string text)
+void print_text_10(string text)
 {
     cout << left << setw(10) << " " << right << setw(10) << text << endl;
-    timer(2);
     return;
 }
 
@@ -24,77 +23,37 @@ void opening()
 {
     timer(2);
     cout << endl << endl << endl;
-    print_text("I would build a great wall.");
-    print_text("And nobody builds walls better than me, believe me.");
-    print_text("And I'll build them very inexpensively.");
-    print_text("I will build a great, great wall on our southern border and I'll have Mexico pay for that wall.");
-    print_text("-Donald Trump");
+    print_delay_10("I would build a great wall.");
+    print_delay_10("And nobody builds walls better than me,");
+    print_delay_10("believe me.");
+    print_delay_10("And I'll build them very inexpensively.");
+    print_delay_10("I will build a great,");
+    cout << left << setw(8) << " " << right << setw(8) << "great" << endl;
+    timer(2);
+    cout << left << setw(7) << " " << right << setw(7) << "wall" << endl;
+    timer(2);
+    print_delay_10("on our southern border");
+    print_delay_10("and I'll have Mexico pay for that wall.");
+    print_delay_10("-Donald Trump");
     return;
 }
 
 void title()
 {
-    timer(2);
     cout << endl << endl << endl;
-    cout << left << setw(30) << " " << right << setw(30) << "██╗    ██╗ █████╗ ██╗     ██╗     " << endl;
-    cout << left << setw(30) << " " << right << setw(30) << "██║    ██║██╔══██╗██║     ██║     " << endl;
-    cout << left << setw(30) << " " << right << setw(30) << "██║ █╗ ██║███████║██║     ██║     " << endl;
-    cout << left << setw(30) << " " << right << setw(30) << "██║███╗██║██╔══██║██║     ██║     " << endl;
-    cout << left << setw(30) << " " << right << setw(30) << "╚███╔███╔╝██║  ██║███████╗███████╗" << endl;
-    cout << left << setw(30) << " " << right << setw(30) << " ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚══════╝" << endl;
-    return;
-}
-
-void main_menu()
-{
-    cout << endl << endl << endl;
-    cout << left << setw(10) << " " << right << setw(10) << "┌┬┐ ┌─┐ ┬ ┌┐┌  ┌┬┐ ┌─┐ ┌┐┌ ┬ ┬" << endl;
-    cout << left << setw(10) << " " << right << setw(10) << "│││ ├─┤ │ │││  │││ ├┤  │││ │ │" << endl;
-    cout << left << setw(10) << " " << right << setw(10) << "┴ ┴ ┴ ┴ ┴ ┘└┘  ┴ ┴ └─┘ ┘└┘ └─┘" << endl << endl;
-    cout << left << setw(10) << " " << right << setw(10) << "1 - New Game" << endl;
-    cout << left << setw(10) << " " << right << setw(10) << "2 - Load Game" << endl;
-    cout << endl << endl << endl;
+    print_text_30("██╗    ██╗ █████╗ ██╗     ██╗     ");
+    print_text_30("██║    ██║██╔══██╗██║     ██║     ");
+    print_text_30("██║ █╗ ██║███████║██║     ██║     ");
+    print_text_30("██║███╗██║██╔══██║██║     ██║     ");
+    print_text_30("╚███╔███╔╝██║  ██║███████╗███████╗");
+    print_text_30(" ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚══════╝");
     return;
 }
 
 int main()
 {
-    ifstream outFS;
-    unsigned selection;
     opening();
     title();
-    main_menu();
-    cout << left << setw(10) << " " << right << setw(10) << "Enter your selection here: ";
-    cin >> selection;
-    if(selection == 1)
-    {
-        outFS.open("new_game.txt");
-    }
-    else if(selection == 2)
-    {
-        outFS.open("load_game.txt");
-    }
-    else
-    {
-        cout << left << setw(10) << " " << right << setw(10) << "Try again." << endl;
-        while(selection != 1 && selection != 2)
-        {
-            cout << left << setw(10) << " " << right << setw(10) << "Enter your selection here: ";
-            cin >> selection;
-            if(selection == 1)
-            {
-                outFS.open("new_game.txt");
-            }
-            else if(selection == 2)
-            {
-                outFS.open("load_game.txt");   
-            }
-            else
-            {
-                cout << left << setw(10) << " " << right << setw(10) << "Try again." << endl;
-            }
-        }
-        
-    }
+    
     return 0;
 }
