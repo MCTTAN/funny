@@ -1,3 +1,10 @@
+#include <iostream>
+#include <iomanip>
+#include <stdio.h>
+#include <string>
+#include <time.h>
+using namespace std;
+
 void timer(int seconds)
 {
 	clock_t endwait;
