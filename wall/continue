@@ -1,6 +1,6 @@
 void continue()
 {
   indent();
-  cout << "Continue... ";
+  print_text_10("Continue... ");
   return;
 }
