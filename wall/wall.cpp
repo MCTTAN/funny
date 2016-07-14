@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string>
 #include <time.h>
-#include <fstream>
 using namespace std;
 
 void timer(int seconds)
@@ -170,11 +169,17 @@ void dialogue_1()
     indent();
     borders();
     print_text_10("TRUMP: The other candidates —");
+    timer(2);
     cout << left << setw(15) << " " << right << setw(15) << "they went in," << endl;
+    timer(2);
     print_text_17("they didn't know the air conditioning didn't work.");
+    timer(2);
     print_text_17("They sweated like dogs.");
+    timer(2);
     print_text_17("They didn't know the room was too big because they didn't have anybody there.");
+    timer(2);
     print_text_17("How are they gonna beat ISIS?");
+    timer(2);
     print_text_17("I don't think it's gonna happen.");
     return;
 }
@@ -302,7 +307,7 @@ void choice_4()
     indent();
     print_text_10("The choice is yours.");
     print_text_10("1 - For his campaign");
-    print_text_10("2 - For his wall project");
+    print_text_10("2 - For his future projects");
     print_text_10("3 - For him to keep");
     cout << endl;
     return;   
@@ -491,6 +496,7 @@ int main()
             print_text_10("TRUMP: Sorry amigo, but me no gusta.");
             indent();
             print_text_10("Game over");
+            exit(1);
         }
         else if(selection == 3)
         {
@@ -507,6 +513,7 @@ int main()
             print_text_10("TRUMP: Sorry amigo, but me no gusta.");
             indent();
             print_text_10("Game over");
+            exit(1);
         }
     }
     else if(selection == 2)
@@ -520,6 +527,7 @@ int main()
         print_text_10("TRUMP: Sorry amigo, but me no gusta.");
         indent();
         print_text_10("Game over");
+        exit(1);
     }
     
     return 0;
