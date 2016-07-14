@@ -1,0 +1,5 @@
+void indent()
+{
+  cout << endl << endl << endl;
+  return;
+}
