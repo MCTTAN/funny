@@ -53,9 +53,6 @@ void print_delay_10(string text)
 
 int main()
 {
-    string continue_char;
-    unsigned selection;
-    
     opening();
     title();
     instructions();
