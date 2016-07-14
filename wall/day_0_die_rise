@@ -1,0 +1,19 @@
+void day_zero()
+{
+    timer(2);
+    cout << endl << endl << endl;
+    print_text_10("  ^    ^    ^       ^  ");
+    print_text_10(" |D|  |A|  |Y|     |0| ");
+    print_text_10("<___><___><___>   <___>");
+    return;
+}
+
+void day_zero_title()
+{   
+    timer(2);
+    cout << endl << endl << endl;
+    print_text_10("╔╦═╗ ╦ ╔═╗  ╦═╗ ╦ ╔═╗ ╔═╗");
+    print_text_10(" ║ ║ ║ ║╣   ╠╦╝ ║ ╚═╗ ║╣ ");
+    print_text_10("═╩═╝ ╩ ╚═╝  ╩╚═ ╩ ╚═╝ ╚═╝");
+    return;
+}
