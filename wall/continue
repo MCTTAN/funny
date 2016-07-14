@@ -1,5 +1,6 @@
 void continue()
 {
-  cout << endl << endl << endl << "Continue... ";
+  indent();
+  cout << "Continue... ";
   return;
 }
