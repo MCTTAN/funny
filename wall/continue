@@ -1,6 +1,0 @@
-void continue()
-{
-  indent();
-  print_text_10("Continue... ");
-  return;
-}
