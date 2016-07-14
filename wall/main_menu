@@ -1,0 +1,13 @@
+void main_menu()
+{
+    indent();
+    print_text_10("┌┬┐ ┌─┐ ┬ ┌┐┌  ┌┬┐ ┌─┐ ┌┐┌ ┬ ┬");
+    print_text_10("│││ ├─┤ │ │││  │││ ├┤  │││ │ │");
+    print_text_10("┴ ┴ ┴ ┴ ┴ ┘└┘  ┴ ┴ └─┘ ┘└┘ └─┘");
+    cout << endl;
+    print_text_10("1 - New Game");
+    print_text_10("2 - Load Game");
+    indent();
+    print_text_10("Enter your selection here: ");
+    return;
+}
