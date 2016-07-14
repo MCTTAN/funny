@@ -1,24 +1,3 @@
-#include <iostream>
-#include <iomanip>
-#include <stdio.h>
-#include <time.h>
-#include <fstream>
-using namespace std;
-
-void timer(int seconds)
-{
-	clock_t endwait;
-	endwait = clock() + seconds * CLOCKS_PER_SEC;
-	while (clock() < endwait) {}
-	return;
-}
-
-void print_text_10(string text)
-{
-    cout << left << setw(10) << " " << right << setw(10) << text << endl;
-    return;
-}
-
 void opening()
 {
     timer(2);
@@ -48,12 +27,4 @@ void title()
     print_text_30("╚███╔███╔╝██║  ██║███████╗███████╗");
     print_text_30(" ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚══════╝");
     return;
-}
-
-int main()
-{
-    opening();
-    title();
-    
-    return 0;
 }
