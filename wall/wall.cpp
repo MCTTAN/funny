@@ -6,12 +6,6 @@
 #include <fstream>
 using namespace std;
 
-void borders()
-{
-    print_text_10("(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(______)");
-    return;
-}
-
 void timer(int seconds)
 {
 	clock_t endwait;
