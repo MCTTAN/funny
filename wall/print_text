@@ -1,0 +1,31 @@
+void print_text_10(string text)
+{
+    cout << left << setw(10) << " " << right << setw(10) << text << endl;
+    return;
+}
+
+void print_text_17(string text)
+{
+    cout << left << setw(17) << " " << right << setw(17) << text << endl;
+    return;
+}
+
+void print_text_30(string text)
+{
+    cout << left << setw(30) << " " << right << setw(30) << text << endl;
+    return;
+}
+
+void print_delay_10(string text)
+{
+    print_text_10(text);
+    timer(2);
+    return;
+}
+
+void print_delay_17(string text)
+{
+    print_text_17(text);
+    timer(2);
+    return;
+}
