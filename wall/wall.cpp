@@ -40,7 +40,7 @@ void print_text_30(string text)
 
 void borders()
 {
-    print_text_10("(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)");
+    print_text_10("(_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_}{_)");
     cout << endl;
     return;
 }
@@ -92,7 +92,6 @@ void title()
 
 void day_zero()
 {
-    timer(2);
     indent();
     print_text_10("  ^    ^    ^       ^  ");
     print_text_10(" |D|  |A|  |Y|     |0| ");
@@ -240,18 +239,31 @@ void dialogue_2()
     borders();
     print_text_10("TRUMP: Looks like I figured out where the heat's coming from.");
     print_text_17("You boil eggs with that hot-head of yours?");
+    timer(2);
     print_text_10("YOU: Pardon?");
+    timer(2);
     print_text_10("TRUMP: Chill.");
+    timer(2);
     cout << left << setw(12) << " " << right << setw(12) << "Unless," << endl;
+    timer(2);
     cout << left << setw(13) << " " << right << setw(13) << "you can't" << endl;
+    timer(2);
     print_text_17("because you're Mexican?");
-    cout << left << setw(15) << " " << right << setw(15) << "Or a Democrat?" << endl;
-    cout << left << setw(16) << " " << right << setw(16) << "Chinese? Korean? Taliban?" << endl;
+    timer(2);
+    cout << left << setw(16) << " " << right << setw(16) << "Or a Democrat?" << endl;
+    timer(2);
+    cout << left << setw(17) << " " << right << setw(17) << "Chinese? Korean? Taliban?" << endl;
+    timer(2);
     print_text_10("YOU: Erm-");
+    timer(2);
     print_text_10("TRUMP: Well, which is it?");
+    timer(2);
     print_text_10("YOU: ...");
+    timer(2);
     print_text_10("TRUMP: ...");
+    timer(2);
     cout << left << setw(11) << " " << right << setw(11) << "Hmph." << endl;
+    return;
 }
 
 void choice_1()
@@ -427,7 +439,9 @@ int main()
     if(selection == 1)
     {
         indent();
+        borders();
         print_text_10("TRUMP: Prove it.");
+        timer(2);
         trial();
         choice_3();
         cout << "Enter your selection here: ";
@@ -435,7 +449,9 @@ int main()
         if(selection == 1)
         {
             indent();
+            borders();
             print_text_10("TRUMP: What's this for?");
+            timer(2);
             trial();
             choice_4();
             cout << "Enter your selection here: ";
@@ -443,15 +459,17 @@ int main()
             indent();
             borders();
             print_text_10("TRUMP: What am I, some kind of charity bank?");
+            timer(2);
             print_text_10("YOU: No, sir. Just thought I could help, sir.");
+            timer(2);
             print_text_10("TRUMP: I don't need money.");
+            timer(2);
             print_text_10("YOU: I know. But you must want it, sir. Right?");
-            continue_function();
-            getline(cin, continue_char);
-            indent();
-            borders();
+            timer(2);
             print_text_10("TRUMP: I'm never short on money, so I don't want and need your money.");
+            timer(2);
             print_text_10("YOU: How else can I show my support then?");
+            timer(2);
             print_text_10("TRUMP: Don't ask me; surprise me.");
             timer(2);
             print_text_10("End of Day 10");
@@ -461,8 +479,10 @@ int main()
         else if(selection == 2)
         {
             indent();
+            borders();
             print_text_10("TRUMP: EW! HOMOPHOBE!");
             print_text_17("Don't defile my Christianhood with your saucy lips!");
+            timer(2);
             wrong_choice_1();
             cout << "Enter your selection here: ";
             cin >> selection;
@@ -475,7 +495,9 @@ int main()
         else if(selection == 3)
         {
             indent();
+            borders();
             print_text_10("Trump reads your journal.");
+            timer(2);
             indent();
             wrong_choice_1();
             cout << "Enter your selection here: ";
