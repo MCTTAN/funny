@@ -1,0 +1,8 @@
+void trial_1()
+{
+    indent();
+    print_text_10("┌┬┐┬─┐┬┌─┐┬  ");
+    print_text_10(" │ ├┬┘│├─┤│  ");
+    print_text_10(" ┴ ┴└─┴┴ ┴┴─┘");
+    return;
+}
