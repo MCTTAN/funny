@@ -1,0 +1,5 @@
+void continue()
+{
+  cout << endl << endl << endl << "Continue... ";
+  return;
+}
