@@ -67,7 +67,7 @@ void opening()
     print_delay_10("believe me.");
     print_delay_10("And I'll build them very inexpensively.");
     print_delay_10("I will build a great,");
-    cout << left << setw(8) << " " << right << setw(8) << "great" << endl;
+    cout << left << setw(7) << " " << right << setw(8) << "great" << endl;
     timer(2);
     cout << left << setw(7) << " " << right << setw(7) << "wall" << endl;
     timer(2);
