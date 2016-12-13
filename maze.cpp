@@ -89,55 +89,23 @@ int main()
     inFS >> total_rows >> total_columns >> finish_row >> finish_column;
     
     total_squares = total_rows * total_columns;
-    
-    //cout << "Square Positions (x, y)" << endl;
-    for(unsigned m = 0; m < total_rows; ++m)
+ 
+    for(unsigned m = 0; m < total_rows; ++m) // Fill the rows and columns vectors with the coordinates
     {
         for(unsigned n = 0; n < total_columns; ++n)
         {
             rows.push_back(m);
             columns.push_back(n);
-            //cout << "(" << m << ", " << n << ")" << endl;
         }
     }
     
-    /*
-    cout << "Total number of rows: " << total_rows << endl;
-    cout << "Total number of columns: " << total_columns << endl;
-    cout << "Finishing row: " << finish_row << endl;
-    cout << "Finishing column: " << finish_column << endl;
-    
-    cout << endl;
-    */
-    
-    /* 
-    Get the wall layout for each of the squares,
-    starting with the top left square, 
-    moving across the entire top row,
-    then continuing from the left-most square on the second row,
-    and so on.
-    */
-    
-    // Change this so that there's
-    // a recursive function
-    // getting the values instead
-    
-    unsigned int counter = 1;
     while(!inFS.eof())
     {
         inFS >> wall_right >> wall_bottom >> wall_left >> wall_top;
-        /*
-        cout << "Square " << counter << endl;
-        cout << "Right: " << wall_right << endl;
-        cout << "Bottom: " << wall_bottom << endl;
-        cout << "Left: " << wall_left << endl;
-        cout << "Top: " << wall_top << endl;
-        */
         list_right.push_back(wall_right);
         list_bottom.push_back(wall_bottom);
         list_left.push_back(wall_left);
         list_top.push_back(wall_top);
-        counter += 1;
     }
     
     cout << "Please enter the starting row (a number between 0 and " << total_rows - 1 << " inclusive): ";
@@ -173,14 +141,11 @@ int main()
     {
         square_current = square_number(total_squares, position_current, rows, columns);
         
-        //cout << "Current square: " << square_current << endl;
-        
         determine_next(list_right.at(square_current), list_bottom.at(square_current), list_left.at(square_current), list_top.at(square_current), position_next.at(0), position_next.at(1), position_current.at(0), position_current.at(1), position_previous.at(0), position_previous.at(1));
         cout << "(" << position_next.at(0) << ", " << position_next.at(1) << ")" << endl;
         
         position_previous.at(0) = position_current.at(0);
         position_previous.at(1) = position_current.at(1);
-        //cout << "Previous position (x, y): (" << position_previous.at(0) << ", " << position_previous.at(1) << ")" << endl;
         
         position_current.at(0) = position_next.at(0);
         position_current.at(1) = position_next.at(1);
